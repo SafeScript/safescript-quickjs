@@ -1,0 +1,16 @@
+// @safescript 0.2
+// @needs data: Array
+// Transform an array of records — the kind of thing you'd use Lua for.
+
+var out = [];
+var i = 0;
+while (i < data.length) {
+  var item = data[i];
+  out[out.length] = {
+    id: item.id,
+    label: item.name + " (" + item.category + ")",
+    active: item.status === "active"
+  };
+  i = i + 1;
+}
+out;

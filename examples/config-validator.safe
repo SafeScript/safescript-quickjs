@@ -1,0 +1,27 @@
+// @safescript 0.2
+// @needs config: Object
+// Validate a configuration object from the host application.
+
+var errors = [];
+
+if (!config.name || config.name.length === 0) {
+  errors[errors.length] = "name is required";
+}
+
+if (config.port !== undefined) {
+  if (typeof config.port !== "number" || config.port < 1 || config.port > 65535) {
+    errors[errors.length] = "port must be 1-65535";
+  }
+}
+
+if (config.workers !== undefined) {
+  if (typeof config.workers !== "number" || config.workers < 1) {
+    errors[errors.length] = "workers must be >= 1";
+  }
+}
+
+var result = {
+  valid: errors.length === 0,
+  errors: errors
+};
+result;

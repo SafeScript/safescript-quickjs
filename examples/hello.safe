@@ -1,0 +1,5 @@
+// @safescript 0.2
+// A minimal SafeScript example for embedded use.
+
+var greeting = "Hello from SafeScript running in QuickJS!";
+greeting;
