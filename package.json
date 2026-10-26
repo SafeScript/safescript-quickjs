@@ -1,17 +1,23 @@
 {
   "name": "safescript-quickjs",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "Embed SafeScript in C/C++/Rust applications via QuickJS",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
     "bundle": "node bundle.js"
   },
-  "keywords": ["safescript", "quickjs", "embed", "sandbox", "lua-alternative"],
+  "keywords": [
+    "safescript",
+    "quickjs",
+    "embed",
+    "sandbox",
+    "lua-alternative"
+  ],
   "author": "Gregory Magarshak",
   "license": "MIT",
   "dependencies": {
-    "safescript": ">=0.2.0"
+    "safescript": ">=1.1.0"
   },
   "repository": {
     "type": "git",
